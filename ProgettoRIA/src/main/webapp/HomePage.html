@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" media="all"
+          href="CSS/home.css" />
+    <script src="utils.js" charset="utf-8" defer></script>
+    <script src="homeManagement.js" charset="utf-8" defer></script>
+</head>
+
+
+<body>
+
+
+
+    <div class="maindiv">
+        <!-- Link per logout -->
+
+        <div class="logoutdiv" id="id_logout" align="right">
+            <a href="Logout">Logout</a>
+        </div>
+
+        <!-- Saluto personalizzato -->
+
+        <div class="userdiv">
+            <p>
+            <h3>Welcome, <span id="id_userinfo"></span>!</h3>
+        </div>
+
+
+        <div class="centerdiv">
+
+            <!-- Lista delle categorie -->
+
+            <div id="id_listcontainer" class="listdiv">
+                
+
+                    <!--/<ul id="id_listcontainerbody"><li id="id_category"></li></ul>
+                    /-->
+
+                 
+            </div>
+
+            <div class="confirmdiv">
+                <button id="id_confirmbutton" name="Confirm" class="confirmbutton">Confirm</button>
+            </div>
+
+            <div id="container"></div>
+
+            <!-- Per indicare l'errore se qualcosa va storto -->
+
+            <div id="id_alert" class="alertmessage"></div>
+
+            <!-- Form per la creazione di una categoria -->
+
+            <div id="id_formdiv" class="formdiv">
+
+                <div class="formlabeldiv">
+                    <label>Complete the form to create a category</label>
+                </div>
+
+
+                <form id="id_categoryform" action="#">
+
+                    <fieldset>
+                        <p>
+                            Name: <input type="text" name="name" required />
+                        </p>
+
+                        <p>
+                            <label>Father category:</label>
+                            <select id="id_selection" name="fcatId" >
+                                <option id="id_option"></option> 
+                            </select>
+                        </p>
+
+                        <input type="submit" id="id_formbutton" value="Submit" class="formbutton">
+
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,207 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Palatino Linotype, sans-serif;
+}
+
+* {
+    list-style: none;
+    box-sizing: border-box;
+}
+
+
+
+.maindiv {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.userdiv {
+    background-color: #4c72b9ba;
+    color: white;
+    font-weight: bold;
+    z-index: 2;
+    width: fit-content;
+
+    padding: 1px 20px;
+
+    text-align: left;
+    font-family: Bell MT, sans-serif;
+}
+
+
+.centerdiv {
+
+    z-index: 2;
+    padding: 10px;
+
+    position: relative;
+    top: 2%;
+
+}
+
+
+.listdiv {
+    background-color: rgba(120, 120, 120, 0.7);
+    color: white;
+    font-size: 18px;
+    z-index: 2;
+    padding: 10px;
+    text-align: left;
+    font-family: Bell MT, sans-serif;
+
+}
+
+.confirmdiv {
+    align-content: center;
+}
+
+.confirmbutton{
+    border: dimgrey;
+    padding: 8px 15px;
+    color: white;
+    background-color: rgba(160, 58, 58, 0.8);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Palatino Linotype, sans-serif;
+    z-index: 2;
+
+
+}
+
+.alertmessage {
+    color: #a10000;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    z-index: 2;
+    padding-bottom: 20px;
+}
+
+.formdiv {
+
+    background-color: rgba(0,0,0, 0.5);
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+
+    z-index: 2;
+    width: 40%;
+    text-align: center;
+
+    font-family: Palatino Linotype, sans-serif;
+    padding: 15px;
+
+    margin: 0 auto;
+    font-size: 16px;
+}
+
+.formlabeldiv {
+    padding-bottom: 10px;
+}
+
+
+.logoutdiv {
+    color: #ffffff;
+    font-weight: bold;
+    position: relative;
+    text-align: right;
+    z-index: 2;
+    padding-top: 10px;
+    padding-right: 10px;
+}
+
+
+
+.formbutton {
+    border: none;
+    padding: 8px 14px;
+    color: white;
+    background-color: rgba(85, 115, 160, 0.8);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Palatino Linotype, sans-serif;
+}
+
+
+
+ul li:not(.top) {
+    margin-left: 15px;
+    position: relative;
+    padding-left: 5px;
+}
+
+ul li:not(.top)::before {
+    content: " ";
+    position: absolute;
+    width: 1px;
+    background-color: #000;
+    top: 5px;
+    bottom: -12px;
+    left: -10px;
+}
+
+body > ul > li:first-child::before {top: 12px;}
+
+ul li:not(:first-child):last-child::before {display: none;}
+
+ul li:not(.top):only-child::before {
+    display: list-item;
+    content: " ";
+    position: absolute;
+    width: 1px;
+    background-color: #000;
+    top: 5px;
+    bottom: 7px;
+    height: 7px;
+    left: -10px;
+}
+
+ul li:not(.top)::after {
+    content: " ";
+    position: absolute;
+    left: -10px;
+    width: 10px;
+    height: 1px;
+    background-color: #000;
+    top: 12px;
+}
+
+.selected{
+    color: red;
+}
+
+.notselected{
+    color: white;
+}
+
+
+input {
+    padding: 2px;
+    background-color: rgba(67, 68, 75, 0.9);
+    color: white;
+    font-size: 14px;
+    font-family: Verdana, sans-serif;
+    text-align: center;
+}
+
+option {
+    padding: 2px;
+    background-color: rgba(67, 68, 75, 0.9);
+    color: white;
+    font-size: 14px;
+    font-family: Verdana, sans-serif;
+}
+
+.hidden {
+    display: none;
+}

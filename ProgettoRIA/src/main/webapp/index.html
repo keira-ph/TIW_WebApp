@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Login page</title>
+    <link rel="stylesheet" type="text/css" media="all"
+          href="CSS/login.css" />
+    <script src="utils.js" charset="utf-8" defer></script>
+    <script src="loginManagement.js" charset="utf-8" defer></script>
+
+</head>
+
+<body>
+
+
+
+<div class="titlediv">
+    <h1>Welcome to the Most Useful Tree In the World!</h1>
+</div>
+
+<div class="formdiv">
+    <form action="#">
+        <fieldset>
+
+            <div class="namediv">
+                Username:  <input type="text" name="username" required> <br>
+            </div>
+
+            <div class="pswdiv">
+                Password:  <input type="password" name="password" required><br>
+            </div>
+
+            <div>
+                <input class="buttondiv" type="submit" id="loginbutton" value="CheckLogin">
+            </div>
+
+            <div class="messagediv">
+                <p id="errormessage"></p>
+            </div>
+        </fieldset>
+    </form>
+</div>
+
+</body>
+</html>
