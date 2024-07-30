@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>TREE Home</title>
+<link rel="stylesheet" type="text/css" media="all" href="/ProgettoHTML/css/mystyle.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" >
+<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<div align="right" class= "logout">
+		<a th:href="@{/Logout}">Logout</a>
+	</div>
+
+<h1>Welcome to the Category Tree</h1>
+
+<ul>
+
+		<li th:each="category : ${topcats}"
+			th:insert="@{WEB-INF/fragment.html} :: list (category)"></li>
+	</ul>
+<div
+align="left" class= "normal">
+<th:block th:if="${rootid!=0 and #arrays.length(topcats)<9}">	 
+	<a th:href="@{/CopyHere(id=${0},  rootid=${rootid.toString()})}">Copia qui</a> 
+	
+</th:block>
+
+<div class= "normal" th:if="${badRequestadd}"> The inserted values are invalid </div>
+<div class= "normal" th:if="${badRequestCopy}"> The chosen root is invalid </div>
+<div class= "normal" th:if="${badRequestQui}"> The chosen category is invalid </div>
+<div class= "normal" th:if="${badRequestHome}"> The inserted values are invalid </div>
+</div>
+	<div  class="formdiv">
+		<p class= "instructions">Complete the form to add a category</p>
+		<form  action="#" th:action="@{/AddCategory}" method="POST"  >
+		
+			<fieldset class="my-fieldset">
+				
+				<p>
+					Name: <input type="text" name="name" required />
+				</p>
+				
+				<p>
+					Description: <input type="text" name="description" required />
+				</p>
+				
+				<p>
+					<label for="allcats">Choose a father category:</label> <select
+						name="fcatId" id="fcatId">
+						<option th:if="${#arrays.length(topcats)<9}" value="0">-</option>
+						<option th:each="c : ${almostallcats}" th:value="${c.id}"
+						th:text="${c.id}+${c.name} "></option> 
+						
+					</select>
+				</p>
+				
+				<input type="submit" >
+				
+			</fieldset>
+		</form>
+	</div>
+
+
+	<div  class="formdiv">
+		<p class= "instructions">Complete the form to add an image</p>
+		<form action='#' th:action="@{/CreateImage}" method="POST" enctype="multipart/form-data">
+		<fieldset class="my-fieldset">
+        <p>
+					<label for="allcats">Choose an id:</label> <select
+						name="id" id="id">
+						<option value="0">-</option>
+						<option th:each="c : ${allcats}" th:value="${c.id}"
+						th:text="${c.id}+${c.name} "></option> 
+						
+					</select>
+				</p>
+				
+        <label for="image">Image:</label>
+        <input type="file" id="image" name="image" required /><br/><br/>
+
+        <input type="submit" value="Upload" />
+        </fieldset>
+    </form>
+	</div>
+	
+	<div  class="formdiv">
+		<p class= "instructions">Complete the form to get an image</p>
+		<form action='#' th:action="@{/GetImage}" >
+		<fieldset class="my-fieldset">
+        <p>
+					<label for="allcats">Choose an id:</label> <select
+						name="id" id="id">
+						
+						<option th:each="c : ${allcats}" th:value="${c.id}"
+						th:text="${c.id}+${c.name} "></option> 
+						
+					</select>
+				</p>
+				
+        
+
+        <input type="submit" value="Upload" />
+        </fieldset>
+    </form>
+	</div>
+		
+		<div th:each="image : ${images}">
+        <img th:src="|data:image/jpeg;base64, ${image.image}| " width="300" />
+    	</div>
+    
+    <div class= "instructions" th:unless="${images != null and not #lists.isEmpty(images)}">
+        <p>Select an id to get the images</p>
+    </div>
+	
+	
+		
+	
+	
+	
+</body>
+</html>

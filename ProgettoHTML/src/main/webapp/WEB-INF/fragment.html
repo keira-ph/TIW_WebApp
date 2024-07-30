@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<body>
+ 	
+<div th:fragment="list(category)">
+
+		
+	<div th:if="${category.isTop == true}" th:class=" (${rootid!=0 and category.id.toString().startsWith(rootid.toString())} ) ? 'rossotop' : 'normal'">
+
+		
+			
+			<span th:text="${category.id +' '+ category.name }"></span>
+
+			<th:block th:if="${rootid==0}">
+			<a th:href="@{/CopyLink(id=${category.id})}">Copia</a>
+			</th:block>
+			
+			<th:block th:if="${rootid!=0 and category.children<9 and !(category.id.toString().startsWith( rootid.toString()))}">		
+			<a th:href="@{/CopyHere(id=${category.id}, rootid=${rootid.toString()})}">Copia qui</a>
+			</th:block>
+		
+
+	</div>
+
+
+
+
+<ul th:unless="${#lists.isEmpty(category.subcats)}" >
+
+<li th:each="child : ${category.subcats}" th:class="(${rootid!=0  and child.id.toString().startsWith(rootid.toString())} ) ? 'rossotop' : 'normal'">
+
+<span th:text="${child.id +' '+ child.name}"></span>
+
+<th:block th:if="${rootid==0}">				
+	<a th:href="@{/CopyLink(id=${child.id})}">Copia</a> 
+</th:block>
+
+<th:block th:if="${rootid!=0 and child.children<9 and !(child.id.toString().startsWith(rootid.toString()))}">	 
+	<a th:href="@{/CopyHere(id=${child.id},rootid=${rootid.toString()})}">Copia qui</a> 
+</th:block>
+				
+				
+				
+<ul th:replace="this::list (${child})"></ul>
+</li>
+
+</ul>
+
+</div>
+
+</body>
+
+</html>
