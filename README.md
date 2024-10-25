@@ -29,19 +29,19 @@ Per velocizzare la costruzione della tassonomia l’utente può copiare un inter
 
 Ad esempio, a seguito del click sul link “copia” associato alla categoria “9111 Amianto” l’applicazione visualizza l’albero come segue:
 
-```
+
 9 Materiali solidi>>copia qui 
 91  Materiali inerti>>copia qui 
 911 Inerti da edilizia >>copia qui 
-`9111 Amianto`  
-`91111 Amianto in lastre`  
-`91112 Amianto in frammenti`  
+**9111 Amianto** 
+**91111 Amianto in lastre**  
+**91112 Amianto in frammenti**
 9112 Materiali cementizi >>copia qui 
 912 Inerti ceramici >>copia qui 
 9121 Piastrelle >>copia qui 
 9122 Sanitari >>copia qui 
 92 Materiali ferrosi >>copia qui
-```
+
 
 La selezione di un link “copia qui” comporta l’inserimento di una copia del sottoalbero come ultimo figlio della categoria destinazione. Ad esempio, la selezione del link “copia qui” della categoria “9 Materiali solidi” comporta la seguente modifica dell’albero:
 
