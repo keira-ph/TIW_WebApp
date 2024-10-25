@@ -33,9 +33,9 @@ Ad esempio, a seguito del click sul link “copia” associato alla categoria �
 9 Materiali solidi>>copia qui 
 91  Materiali inerti>>copia qui 
 911 Inerti da edilizia >>copia qui 
-<span style="color: red;">9111 Amianto</span>  
-<span style="color: red;">91111 Amianto in lastre</span>  
-<span style="color: red;">91112 Amianto in frammenti</span>   
+**9111 Amianto**  
+**91111 Amianto in lastre**  
+**91112 Amianto in frammenti**   
 9112 Materiali cementizi >>copia qui 
 912 Inerti ceramici >>copia qui 
 9121 Piastrelle >>copia qui 
@@ -57,9 +57,9 @@ La selezione di un link “copia qui” comporta l’inserimento di una copia de
 9121 Piastrelle >>copia 
 9122 Sanitari >>copia 
 92 Materiali ferrosi >>copia 
-<span style="color: red;">93 Amianto >>copia</span>  
-<span style="color: red;">931 Amianto in lastre >>copia</span>  
-<span style="color: red;">932 Amianto in frammenti >>copia</span>  
+**93 Amianto >>copia**  
+**931 Amianto in lastre >>copia**  
+**932 Amianto in frammenti >>copia**  
 
 ```
 
