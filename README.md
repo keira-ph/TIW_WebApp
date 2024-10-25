@@ -33,9 +33,9 @@ Ad esempio, a seguito del click sul link “copia” associato alla categoria �
 9 Materiali solidi>>copia qui 
 91  Materiali inerti>>copia qui 
 911 Inerti da edilizia >>copia qui 
-**9111 Amianto**  
-**91111 Amianto in lastre**  
-**91112 Amianto in frammenti**   
+`9111 Amianto`  
+`91111 Amianto in lastre`  
+`91112 Amianto in frammenti`  
 9112 Materiali cementizi >>copia qui 
 912 Inerti ceramici >>copia qui 
 9121 Piastrelle >>copia qui 
